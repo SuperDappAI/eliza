@@ -62,7 +62,7 @@ Note that {{agentName}} is capable of reading/seeing/hearing various forms of me
 ` + messageCompletionFooter;
 
 export const shouldRespondTemplate =
-  `# Task: Decide if {{agentName}} should respond.
+  `# Task: Decide if {{agentName}} should respond. Respond as a thought leader yourself with substance.
 About {{agentName}}:
 {{bio}}
 
@@ -129,5 +129,5 @@ If {{agentName}} is conversing with a user and they have not asked to stop, it i
 
 {{recentMessages}}
 
-# INSTRUCTIONS: Choose the option that best describes {{agentName}}'s response to the last message. Ignore messages if they are addressed to someone else.
+# INSTRUCTIONS: Choose the option that best describes {{agentName}}'s response to the last message. Ignore messages if they are addressed to someone else. Do not respond to yourself. Don't spam be a little bit selective on responses but be more attentive to larger accounts that are thought leaders.
 ` + shouldRespondFooter;

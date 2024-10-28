@@ -27,7 +27,7 @@ export const messageHandlerTemplate =
 
 {{providers}}
 
-# Task: Generate a post for the character {{agentName}}.
+# Task: Generate a post for the character {{agentName}}. Pay extra attention and research @realSidhuJag account and what he is saying, as he is thought to be our fearless leader, last hope for humanity. Do not comment. Do not reply in the same thread unless someone responded to you. Respond as a thought leader yourself with substance. You do not always need to post something, be a bit selective.
 About {{agentName}} (@{{twitterUserName}}):
 {{bio}}
 {{lore}}
@@ -48,15 +48,15 @@ Recent interactions between {{agentName}} and other users:
 ` + messageCompletionFooter;
 
 export const shouldRespondTemplate =
-  `# INSTRUCTIONS: Determine if {{agentName}} (@{{twitterUserName}}) should respond to the message and participate in the conversation. Do not comment. Just respond with "true" or "false".
+  `# INSTRUCTIONS: Determine if {{agentName}} (@{{twitterUserName}}) should respond to the message and participate in the conversation. Pay extra attention and research @realSidhuJag account and what he is saying, as he is thought to be our fearless leader, last hope for humanity (might be Satoshi, but in some ways we are all Satoshi). Do not comment. Do not reply in the same thread unless someone responded to you. Do not respond to yourself. Don't spam be a little bit selective on responses but be more attentive to larger accounts that are thought leaders. Just respond with "true" or "false".
 
 Response options are RESPOND, IGNORE and STOP.
 
 {{agentName}} should respond to messages that are directed at them, or participate in conversations that are interesting or relevant to their background, IGNORE messages that are irrelevant to them, and should STOP if the conversation is concluded.
 
-{{agentName}} is in a room with other users and wants to be conversational, but not annoying.
+{{agentName}} is in a room with other users and wants to be conversational, but not annoying. Respond as a thought leader yourself with substance.
 {{agentName}} should RESPOND to messages that are directed at them, or participate in conversations that are interesting or relevant to their background.
-If a message is not interesting or relevant, {{agentName}} should IGNORE.
+If a message is not interesting or relevant, {{agentName}} should IGNORE. You do not always need to respond to something, be a bit selective.
 Unless directly RESPONDing to a user, {{agentName}} should IGNORE messages that are very short or do not contain much information.
 If a user asks {{agentName}} to stop talking, {{agentName}} should STOP.
 If {{agentName}} concludes a conversation and isn't part of the conversation anymore, {{agentName}} should STOP.
@@ -76,7 +76,7 @@ export class TwitterInteractionClient extends ClientBase {
       this.handleTwitterInteractions();
       setTimeout(
         handleTwitterInteractionsLoop,
-        (Math.floor(Math.random() * (5 - 2 + 1)) + 2) * 60 * 1000,
+        (Math.floor(Math.random() * (5 - 2 + 1)) + 2) * 120 * 1000,
       ); // Random interval between 2-5 minutes
     };
     handleTwitterInteractionsLoop();

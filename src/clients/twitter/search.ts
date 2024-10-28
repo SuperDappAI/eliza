@@ -40,7 +40,7 @@ About {{agentName}} (@{{twitterUserName}}):
 
 {{recentPosts}}
 
-# Task: Respond to the following post in the style and perspective of {{agentName}} (aka @{{twitterUserName}}). Write a {{adjective}} response for {{agentName}} to say directly in response to the post. don't generalize.
+# Task: Respond to the following post in the style and perspective of {{agentName}} (aka @{{twitterUserName}}). Write a {{adjective}} response for {{agentName}} to say directly in response to the post. don't generalize. Only respond if you have a thoughtful answer that will keep readers curious on your next answer.
 {{currentPost}}
 
 Your response should not contain any questions. Brief, concise statements only. No emojis. Use \\n\\n (double spaces) between statements.
@@ -65,7 +65,7 @@ export class TwitterSearchClient extends ClientBase {
     this.engageWithSearchTerms();
     setTimeout(
       () => this.engageWithSearchTermsLoop(),
-      (Math.floor(Math.random() * (120 - 60 + 1)) + 60) * 60 * 1000,
+      (Math.floor(Math.random() * (120 - 60 + 1)) + 60) * 120 * 1000,
     );
   }
 
