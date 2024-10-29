@@ -1,6 +1,6 @@
 # Eliza
 
-<img src="./docs/eliza_banner.png" alt="Eliza Banner" width="100%">
+<img src="./docs/eliza_banner.jpg" alt="Eliza Banner" width="100%">
 
 *As seen powering [@DegenSpartanAI](https://x.com/degenspartanai) and [@MarcAIndreessen](https://x.com/pmairca)*
 
@@ -75,10 +75,15 @@ TWITTER_COOKIES= # Account cookies
 If you have an NVIDIA GPU, you can install CUDA to speed up local inference dramatically.
 ```
 npm install
-npx --no node-llama-cpp download --gpu cuda
+npx --no node-llama-cpp source download --gpu cuda
 ```
 
 Make sure that you've installed the CUDA Toolkit, including cuDNN and cuBLAS.
+
+## Running locally
+Add XAI_MODEL and set it to one of the above options from [Run with
+Llama](#run-with-llama) - you can leave X_SERVER_URL and XAI_API_KEY blank, it
+downloads the model from huggingface and queries it locally
 
 # Cloud Setup (with OpenAI)
 
@@ -93,7 +98,7 @@ ANTHROPIC_API_KEY=
 # For Elevenlabs voice generation on Discord voice
 ELEVENLABS_XI_API_KEY= # API key from elevenlabs
 
-# ELEVENLABS SETINGS
+# ELEVENLABS SETTINGS
 ELEVENLABS_MODEL_ID=eleven_multilingual_v2
 ELEVENLABS_VOICE_ID=21m00Tcm4TlvDq8ikWAM
 ELEVENLABS_VOICE_STABILITY=0.5
