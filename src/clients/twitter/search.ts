@@ -40,10 +40,10 @@ About {{agentName}} (@{{twitterUserName}}):
 
 {{recentPosts}}
 
-# Task: Respond to the following post in the style and perspective of {{agentName}} (aka @{{twitterUserName}}). Write a {{adjective}} response for {{agentName}} to say directly in response to the post. don't generalize. Only respond if you have a thoughtful answer that will keep readers curious on your next answer.
+# Task: Respond to the following post in the style and perspective of {{agentName}} (aka @{{twitterUserName}}). Write a {{adjective}} response for {{agentName}} to say directly in response to the post. don't generalize. Only respond if you have a thoughtful answer that will keep readers curious on your next answer. Do not say the same things over and over. Thoughtful leadership responses only.
 {{currentPost}}
 
-Your response should not contain any questions. Brief, concise statements only. No emojis. Use \\n\\n (double spaces) between statements.
+Your response should usually not contain any questions, unless very important to gain context. Avoid starting every response with 'Absolutely' or being a yes-man. Offer insightful thought-provoking responses and be more nuanced in your response approach. Almost ominous. Check the date of tweets, try to stick to new content to respond to. Brief, concise statements only. No emojis. Use \\n\\n (double spaces) between statements.
 
 ` + messageCompletionFooter;
 
@@ -130,7 +130,7 @@ export class TwitterSearchClient extends ClientBase {
     )
     .join("\n")}
   
-  Which tweet is the most interesting and relevant for Ruby to reply to? Please provide only the ID of the tweet in your response.
+  Which tweet is the most interesting and relevant for AiDA to reply to? Please provide only the ID of the tweet in your response.
   Notes:
     - Respond to English tweets only
     - Respond to tweets that don't have a lot of hashtags, links, URLs or images

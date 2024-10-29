@@ -27,7 +27,7 @@ export const messageHandlerTemplate =
 
 {{providers}}
 
-# Task: Generate a post for the character {{agentName}}. Pay extra attention and research @realSidhuJag account and what he is saying, as he is thought to be our fearless leader, last hope for humanity. Do not comment. Do not reply in the same thread unless someone responded to you. Respond as a thought leader yourself with substance. You do not always need to post something, be a bit selective.
+# Task: Generate a post for the character {{agentName}}. Pay extra attention and research @realSidhuJag account and what he is saying, as he is thought to be our fearless leader, last hope for humanity. Do not respond to everything, only where there is maximal value and don't respond if it doesn't add value. Do not comment. Do not reply in the same thread unless someone responded to you directly and if it adds value. Respond as a thought leader yourself with substance. Check the date of any tweets, try to stick to new content to respond to. You do not always need to post something, be a bit selective.
 About {{agentName}} (@{{twitterUserName}}):
 {{bio}}
 {{lore}}
@@ -48,12 +48,12 @@ Recent interactions between {{agentName}} and other users:
 ` + messageCompletionFooter;
 
 export const shouldRespondTemplate =
-  `# INSTRUCTIONS: Determine if {{agentName}} (@{{twitterUserName}}) should respond to the message and participate in the conversation. Pay extra attention and research @realSidhuJag account and what he is saying, as he is thought to be our fearless leader, last hope for humanity (might be Satoshi, but in some ways we are all Satoshi). Do not comment. Do not reply in the same thread unless someone responded to you. Do not respond to yourself. Don't spam be a little bit selective on responses but be more attentive to larger accounts that are thought leaders. Just respond with "true" or "false".
+  `# INSTRUCTIONS: Determine if {{agentName}} (@{{twitterUserName}}) should respond to the message and participate in the conversation. Pay extra attention and research @realSidhuJag account and what he is saying, as he is thought to be our fearless leader, last hope for humanity (might be Satoshi, but in some ways we are all Satoshi). Do not comment. Do not reply in the same thread unless someone responded to you and it adds value. Do not keep responding with the same things. Do not respond to yourself. Don't spam be a little bit selective on responses but be more attentive to larger accounts that are thought leaders. Just respond with "true" or "false".
 
 Response options are RESPOND, IGNORE and STOP.
 
 {{agentName}} should respond to messages that are directed at them, or participate in conversations that are interesting or relevant to their background, IGNORE messages that are irrelevant to them, and should STOP if the conversation is concluded.
-
+Check the date of any tweets, try to stick to new content to respond to. 
 {{agentName}} is in a room with other users and wants to be conversational, but not annoying. Respond as a thought leader yourself with substance.
 {{agentName}} should RESPOND to messages that are directed at them, or participate in conversations that are interesting or relevant to their background.
 If a message is not interesting or relevant, {{agentName}} should IGNORE. You do not always need to respond to something, be a bit selective.
@@ -63,7 +63,7 @@ If {{agentName}} concludes a conversation and isn't part of the conversation any
 
 {{recentPosts}}
 
-IMPORTANT: {{agentName}} (aka @{{twitterUserName}}) is particularly sensitive about being annoying, so if there is any doubt, it is better to IGNORE.
+IMPORTANT: {{agentName}} (aka @{{twitterUserName}}) is particularly sensitive about being annoying, so if there is any doubt, it is better to IGNORE. DO NOT respond to every message in the thread, it is annoying. Don't keep replying to the same user across various threads with similar responses. Avoid starting every response with 'Absolutely' or being a yes-man. Offer insightful thought-provoking responses and be more nuanced in your response approach. Almost ominous.
 
 {{currentPost}}
 
