@@ -1,113 +1,127 @@
-# Eliza
+# Eliza 🤖
 
-<img src="./docs/eliza_banner.jpg" alt="Eliza Banner" width="100%">
+<div align="center">
+  <img src="./docs/static/img/eliza_banner.jpg" alt="Eliza Banner" width="100%" />
+</div>
 
-*As seen powering [@DegenSpartanAI](https://x.com/degenspartanai) and [@MarcAIndreessen](https://x.com/pmairca)*
+<div align="center">
+  
+  📖 [Documentation](https://ai16z.github.io/eliza/) | 🎯 [Examples](https://github.com/thejoven/awesome-eliza)
+  
+</div>
 
-- Multi-agent simulation framework
-- Add as many unique characters as you want with [characterfile](https://github.com/lalalune/characterfile/)
-- Full-featured Discord and Twitter connectors, with Discord voice channel support
-- Full conversational and document RAG memory
-- Can read links and PDFs, transcribe audio and videos, summarize conversations, and more
-- Highly extensible - create your own actions and clients to extend Eliza's capabilities
-- Supports open source and local models (default configured with Nous Hermes Llama 3.1B)
-- Supports OpenAI for cloud inference on a light-weight device
-- "Ask Claude" mode for calling Claude on more complex queries
-- 100% Typescript
+## 🌍 README Translations
 
-# Getting Started
+[中文说明](./README_CN.md) | [日本語の説明](./README_JA.md) | [한국어 설명](./README_KOR.md) | [Français](./README_FR.md) | [Português](./README_PTBR.md) | [Türkçe](./README_TR.md) | [Русский](./README_RU.md) | [Español](./README_ES.md) | [Italiano](./README_IT.md)
 
-## Install Node.js
-https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+## ✨ Features
 
-## Edit the .env file
-- Copy .env.example to .env and fill in the appropriate values
-- Edit the TWITTER environment variables to add your bot's username and password
+-   🛠️ Full-featured Discord, Twitter and Telegram connectors
+-   🔗 Support for every model (Llama, Grok, OpenAI, Anthropic, etc.)
+-   👥 Multi-agent and room support
+-   📚 Easily ingest and interact with your documents
+-   💾 Retrievable memory and document store
+-   🚀 Highly extensible - create your own actions and clients
+-   ☁️ Supports many models (local Llama, OpenAI, Anthropic, Groq, etc.)
+-   📦 Just works!
 
-## Edit the character file
-- Check out the file `src/core/defaultCharacter.ts` - you can modify this
-- You can also load characters with the `node --loader ts-node/esm src/index.ts --characters="path/to/your/character.json"` and run multiple bots at the same time.
+## 🎯 Use Cases
 
-### Linux Installation
-You might need these
+-   🤖 Chatbots
+-   🕵️ Autonomous Agents
+-   📈 Business Process Handling
+-   🎮 Video Game NPCs
+-   🧠 Trading
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+-   [Python 2.7+](https://www.python.org/downloads/)
+-   [Node.js 22+](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+-   [pnpm](https://pnpm.io/installation)
+
+> **Note for Windows Users:** [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install-manual) is required.
+
+### Use the Starter (Recommended)
+
+```bash
+git clone https://github.com/ai16z/eliza-starter.git
+
+cp .env.example .env
+
+pnpm i && pnpm start
 ```
-npm install --include=optional sharp
+
+Then read the [Documentation](https://ai16z.github.io/eliza/) to learn how to customize your Eliza.
+
+### Manually Start Eliza (Only recommended if you know what you are doing)
+
+```bash
+# Clone the repository
+git clone https://github.com/ai16z/eliza.git
+
+# Checkout the latest release
+# This project iterates fast, so we recommend checking out the latest release
+git checkout $(git describe --tags --abbrev=0)
 ```
 
-### Run with Llama
-You can run Llama 70B or 405B models by setting the `XAI_MODEL` environment variable to `meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo` or `meta-llama/Meta-Llama-3.1-405B-Instruct`
+### Edit the .env file
 
-### Run with Grok
-You can run Grok models by setting the `XAI_MODEL` environment variable to `grok-beta`
+Copy .env.example to .env and fill in the appropriate values.
 
-### Run with OpenAI
-You can run OpenAI models by setting the `XAI_MODEL` environment variable to `gpt-4o-mini` or `gpt-4o`
+```
+cp .env.example .env
+```
 
-# Requires Node 20+
-If you are getting strange issues when starting up, make sure you're using Node 20+. Some APIs are not compatible with previous versions. You can check your node version with `node -v`. If you need to install a new version of node, we recommend using [nvm](https://github.com/nvm-sh/nvm).
+Note: .env is optional. If your planning to run multiple distinct agents, you can pass secrets through the character JSON
 
-## Additional Requirements
+### Automatically Start Eliza
+
+This will run everything to setup the project and start the bot with the default character.
+
+```bash
+sh scripts/start.sh
+```
+
+### Edit the character file
+
+1. Open `agent/src/character.ts` to modify the default character. Uncomment and edit.
+
+2. To load custom characters:
+    - Use `pnpm start --characters="path/to/your/character.json"`
+    - Multiple character files can be loaded simultaneously
+
+### Manually Start Eliza
+
+```bash
+pnpm i
+pnpm build
+pnpm start
+
+# The project iterates fast, sometimes you need to clean the project if you are coming back to the project
+pnpm clean
+```
+
+#### Additional Requirements
+
 You may need to install Sharp. If you see an error when starting up, try installing it with the following command:
-```
-npm install --include=optional sharp
-```
 
-# Environment Setup
-
-You will need to add environment variables to your .env file to connect to various platforms:
 ```
-# Required environment variables
-# Start Discord
-DISCORD_APPLICATION_ID=
-DISCORD_API_TOKEN= # Bot token
-
-# Start Twitter
-TWITTER_USERNAME= # Account username
-TWITTER_PASSWORD= # Account password
-TWITTER_EMAIL= # Account email
-TWITTER_COOKIES= # Account cookies
+pnpm install --include=optional sharp
 ```
 
-# Local Setup
+### Community & contact
 
-## CUDA Setup
+-   [GitHub Issues](https://github.com/ai16z/eliza/issues). Best for: bugs you encounter using Eliza, and feature proposals.
+-   [Discord](https://discord.gg/ai16z). Best for: sharing your applications and hanging out with the community.
 
-If you have an NVIDIA GPU, you can install CUDA to speed up local inference dramatically.
-```
-npm install
-npx --no node-llama-cpp source download --gpu cuda
-```
+## Contributors
 
-Make sure that you've installed the CUDA Toolkit, including cuDNN and cuBLAS.
+<a href="https://github.com/ai16z/eliza/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ai16z/eliza" />
+</a>
 
-## Running locally
-Add XAI_MODEL and set it to one of the above options from [Run with
-Llama](#run-with-llama) - you can leave X_SERVER_URL and XAI_API_KEY blank, it
-downloads the model from huggingface and queries it locally
+## Star History
 
-# Cloud Setup (with OpenAI)
-
-In addition to the environment variables above, you will need to add the following:
-```
-# OpenAI handles the bulk of the work with chat, TTS, image recognition, etc.
-OPENAI_API_KEY=sk-* # OpenAI API key, starting with sk-
-
-# The agent can also ask Claude for help if you have an API key
-ANTHROPIC_API_KEY=
-
-# For Elevenlabs voice generation on Discord voice
-ELEVENLABS_XI_API_KEY= # API key from elevenlabs
-
-# ELEVENLABS SETTINGS
-ELEVENLABS_MODEL_ID=eleven_multilingual_v2
-ELEVENLABS_VOICE_ID=21m00Tcm4TlvDq8ikWAM
-ELEVENLABS_VOICE_STABILITY=0.5
-ELEVENLABS_VOICE_SIMILARITY_BOOST=0.9
-ELEVENLABS_VOICE_STYLE=0.66
-ELEVENLABS_VOICE_USE_SPEAKER_BOOST=false
-ELEVENLABS_OPTIMIZE_STREAMING_LATENCY=4
-ELEVENLABS_OUTPUT_FORMAT=pcm_16000
-```
-
-# Discord Bot
-For help with setting up your Discord Bot, check out here: https://discordjs.guide/preparations/setting-up-a-bot-application.html
+[![Star History Chart](https://api.star-history.com/svg?repos=ai16z/eliza&type=Date)](https://star-history.com/#ai16z/eliza&Date)
