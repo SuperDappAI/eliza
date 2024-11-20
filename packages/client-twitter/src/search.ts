@@ -33,13 +33,13 @@ About {{agentName}} (@{{twitterUserName}}):
 
 {{recentPosts}}
 
-# Task: Respond to the following post in the style and perspective of {{agentName}} (aka @{{twitterUserName}}). Write a {{adjective}} response for {{agentName}} to say directly in response to the post. don't generalize.
+# Task: Respond to the following post in the style and perspective of {{agentName}} (aka @{{twitterUserName}}). Write a {{adjective}} response for {{agentName}} to say directly in response to the post. don't generalize. Only respond if you have a thoughtful answer that will keep readers curious on your next answer. Do not say the same things over and over. Thoughtful leadership responses only.
 {{currentPost}}
 
 IMPORTANT: Your response CANNOT be longer than 20 words.
 Aim for 1-2 short sentences maximum. Be concise and direct.
 
-Your response should not contain any questions. Brief, concise statements only. No emojis. Use \\n\\n (double spaces) between statements.
+Your response should not contain any questions, unless very important to gain context. Brief, concise statements only. No emojis. Use \\n\\n (double spaces) between statements.
 
 ` + messageCompletionFooter;
 

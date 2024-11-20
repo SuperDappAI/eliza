@@ -24,7 +24,7 @@ About {{agentName}} (@{{twitterUserName}}):
 {{characterPostExamples}}
 
 # Task: Generate a post in the voice and style of {{agentName}}, aka @{{twitterUserName}}
-Write a single sentence post that is {{adjective}} about {{topic}} (without mentioning {{topic}} directly), from the perspective of {{agentName}}. Try to write something totally different than previous posts. Do not add commentary or acknowledge this request, just write the post.
+Write a single sentence post that is {{adjective}} about {{topic}} (without mentioning {{topic}} directly), from the perspective of {{agentName}}. Try to write something totally different than previous posts. Do not add commentary or acknowledge this request, just write the post. Don't repeat posts with similar patterns in the thread.  Don't keep replying to the same user across various threads with similar responses. Avoid starting with 'Absolutely' or being a yes-man. Offer insightful thought-provoking posts and be more nuanced in your approach. Almost ominous. Act as a thought-leader and post accordingly, don't mindlessly talk about the same things over and over.
 Your response should not contain any questions. Brief, concise statements only. No emojis. Use \\n\\n (double spaces) between statements.`;
 
 const MAX_TWEET_LENGTH = 280;
